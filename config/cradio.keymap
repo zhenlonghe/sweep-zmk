@@ -31,6 +31,15 @@
 
 / {
     behaviors {
+    	ht: hold_tap {
+                display-name = "hold_tap";
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                flavor = "balanced";
+                tapping-term-ms = <200>;
+                quick-tap-ms = <150>;
+                bindings = <&kp>, <&kp>;
+        };
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
